@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <title>word Guess</title>
+    <link rel="stylesheet" href="./script.js" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Welcome to Word Guess</div>
+
+      <div class="highscore__instruction">
+        <div class="highscore">Highscore: 0</div>
+
+        <p>
+          How to play: You click one of the button below to choose from which
+          category you want your word to be from
+        </p>
+      </div>
+
+      <div class="game-div">
+        <h2>Choose the caterory which you want to play in</h2>
+
+        <div class="Categories">
+          <button class="music">Music</button>
+          <button class="sports">Sports</button>
+          <button class="tech">Tech</button>
+        </div>
+
+        <div class="guessword"></div>
+
+        <div class="score"></div>
+        <div class="playtime">Playtime: 5</div>
+        <div class="check-restart">
+          <div class="check-input">
+            <input type="text" class="guess" />
+            <button class="check">Check</button>
+          </div>
+
+          <div class="Restart">
+            <input type="button" value="Restart" class="restart" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

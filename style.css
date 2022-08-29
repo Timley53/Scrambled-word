@@ -1,0 +1,150 @@
+body {
+  background-color: rgb(28, 13, 73);
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  color: white;
+}
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: larger;
+  font-weight: bolder;
+}
+.highscore__instruction {
+  display: flex;
+  justify-content: space-around;
+
+  margin-bottom: 1.5rem;
+}
+.highscore {
+  width: 50%;
+  margin: 1rem;
+}
+.highscore__instruction p {
+  width: 30%;
+}
+.game-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game-div .Categories {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.Categories button {
+  padding: 0.6rem 1.3rem;
+  color: white;
+  font-size: medium;
+  border-radius: 5px;
+  margin: 0.6rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.Categories .music {
+  position: relative;
+  border: none;
+  background-color: rgb(28, 13, 73);
+  border-radius: 5px;
+}
+.Categories .sports {
+  position: relative;
+  border: none;
+  background-color: rgb(28, 13, 73);
+  border-radius: 5px;
+}
+.Categories .tech {
+  border: 2px solid grey;
+}
+
+.Categories .music::before {
+  content: "";
+  width: 104%;
+  height: 108%;
+  top: 0;
+  left: 0;
+  margin-top: -2px;
+  margin-left: -1.7px;
+  border-radius: 6px;
+
+  position: absolute;
+  background: linear-gradient(to right, red, purple);
+  z-index: -1;
+}
+.Categories .sports::before {
+  content: "";
+  width: 104%;
+  height: 108%;
+  top: 0;
+  left: 0;
+  margin-top: -2px;
+  margin-left: -2px;
+  border-radius: 6px;
+
+  position: absolute;
+  background: linear-gradient(to right, rgb(150, 214, 137), green);
+  z-index: -1;
+}
+.guessword {
+  /* width: 50%; */
+  padding: 0.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+  /* border: 1px solid grey; */
+}
+.right {
+  padding: 0.7rem;
+  background-color: green;
+}
+.wrong {
+  padding: 0.7rem;
+  background-color: red;
+}
+.check-restart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.check-input {
+  padding: 1rem;
+}
+.check-input .guess {
+  padding: 0.3rem;
+}
+.check-input .check {
+  padding: 0.3rem;
+  background-color: transparent;
+  color: white;
+  font-size: medium;
+  border: 2px solid grey;
+  border-radius: 5px;
+}
+.restart {
+  background-color: red;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 5px;
+  font-size: medium;
+  cursor: pointer;
+}
+
+.not-allowed {
+  display: none;
+}
+
+.score {
+  margin: 0.5rem;
+}
