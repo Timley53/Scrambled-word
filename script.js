@@ -19,6 +19,11 @@ let shuffledWord;
 let timesPlayed = 5;
 let highscore = 0;
 //////
+hiscore.textContent = `Highscore: ${
+  localStorage.getItem("highscore") ? localStorage.getItem("highscore") : 0
+}`;
+
+/////////
 const check = function (randArr, userG, shuf) {
   if (!userG) {
     scoreDIv.textContent = "Pleae enter a guess ⛔";
@@ -41,6 +46,10 @@ const check = function (randArr, userG, shuf) {
     scoreDIv.textContent = "Wrong ❌";
   }
 };
+
+function save_highscore(hS) {
+  localStorage.setItem("highscore", hS);
+}
 
 /////////////
 
@@ -177,6 +186,7 @@ restart.addEventListener("click", function (e) {
   e.preventDefault();
   if (score > highscore) {
     highscore = score;
+    save_highscore(highscore);
     hiscore.textContent = `Highscore: ${highscore}`;
   }
   checkbtn.classList.remove("not-allowed");
@@ -196,3 +206,4 @@ restart.addEventListener("click", function (e) {
 //   })
 //   .join("");
 // console.log(shuffle);
+// console.log(Window.sessionStorage);
